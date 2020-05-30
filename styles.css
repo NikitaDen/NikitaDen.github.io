@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: inherit;
+}
+
+a {
+    font-size: 13px;
+    text-decoration: none;
+    color: rgba(0,0,0,0.87)
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Icons*/
+
+.logo {
+    height: 92px;
+    width: 272px;
+    background: url("./google.svg") no-repeat;
+    background-size: contain;
+    color: #757575;
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    background: url("./search.svg") no-repeat;
+    background-size: contain;
+}
+
+.microphone-icon {
+    width: 24px;
+    height: 24px;
+    background: url("./microphone.svg") no-repeat;
+    background-size: contain;
+}
+
+.dots-icon__wrapper {
+    padding: .75rem;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 0 1rem;
+}
+
+.dots-icon__wrapper:hover {
+    background-color: #F2F2F2;
+}
+
+.dots-icon {
+    width: 16px;
+    height: 16px;
+    background: url("./dots.svg") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #689F38;
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    color: white;
+    text-align: center;
+    padding-top: .15rem;
+    cursor: pointer;
+}
+
+.user-icon:hover {
+    box-shadow: 0 1px 10px 0 rgba(32, 33, 36, .28);
+}
+
+/*Search form*/
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .85rem 0 1.35rem;
+    margin-top: 2.5rem;
+    border-radius: 22px;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+.search-form .search-form__input {
+    color: #757575;
+    width: 485px;
+    height: 44px;
+    border: none;
+    padding: 0 1rem;
+    outline: none;
+    font-family: 'Segoe UI', sans-serif;
+
+}
+
+@media all and (max-width: 640px) {
+    .search-form .search-form__input {
+        width: 70vw;
+    }
+}
+
+.label-adding-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+    font-weight: bold;
+    color: #4F5355;
+    width: 112px;
+    background-color: transparent;
+    border-radius: 4px;
+    margin-top: 2rem;
+    padding: 1rem 0 .75rem 0;
+    cursor: pointer;
+}
+
+.label-adding-group:hover {
+    background-color: #F2F2F2;
+}
+
+.label-adding-group:hover .button.button--add {
+    background-color: #E5E7E8;
+}
+
+.label-adding-group .button.button--add {
+    position: relative;
+    height: 48px;
+    width: 48px;
+    background-color: #F1F3F4;
+    border-radius: 50%;
+    margin-bottom: 1.25rem;
+}
+
+.label-adding-group .button.button--add::after {
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("./plus.svg") no-repeat;
+    background-size: contain;
+}
+
+/*Links*/
+
+.links-container {
+    position: relative;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: .7rem 1rem;
+}
+
+.links-container a + a {
+    padding: 0 0 0 15px;
+}
